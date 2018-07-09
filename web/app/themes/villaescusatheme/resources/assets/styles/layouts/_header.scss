@@ -1,7 +1,53 @@
+.banner {
+  text-align: center;
+
+  .brand {
+    text-transform: uppercase;
+
+    @include media-breakpoint-up(sm) {
+      font-size: 1.5em;
+      line-height: 24px;
+    }
+  }
+}
+
 .banner .nav li {
   @extend .nav-item;
 }
 
 .banner .nav a {
   @extend .nav-link;
+
+  padding: 0;
+}
+
+#menu-menu-1 {
+  @extend .justify-content-sm-between ;
+
+  @include media-breakpoint-up(sm) {
+    font-size: 1.5em;
+    line-height: 24px;
+  }
+}
+//nombre de la web
+#menu-item-54 {
+  text-transform: uppercase;
+  border-bottom: none;
+}
+
+.current-menu-item {
+  @include media-breakpoint-up (sm) {
+    border-bottom: 1px solid;
+    padding-bottom: 0.25rem;
+  }
+}
+
+//fixed top
+.sticky-top {
+  background-color: $white;
+
+  @include media-breakpoint-up (sm) {
+    padding-top: $gutter;
+    padding-bottom: $gutter;
+  }
 }

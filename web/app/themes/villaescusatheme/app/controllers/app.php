@@ -1,6 +1,6 @@
 <?php
 
-namespace App;
+namespace App\Controllers;
 
 use Sober\Controller\Controller;
 
@@ -29,5 +29,24 @@ class App extends Controller
             return __('Not Found', 'sage');
         }
         return get_the_title();
+    }
+    public function contact()
+    {
+        $post = [];
+        $post   = get_post( 16, ARRAY_A  );
+        $content = $post['post_content'];
+        return $content;
+    }
+    public function email()
+    {
+        return get_field('email', 16);
+    }
+    public function redes()
+    {
+        $links = [];
+        $fb = get_field('facebook', 16);
+        $inst = get_field('instragram', 16);
+        array_push($links, $fb, $inst);
+        return $links;
     }
 }

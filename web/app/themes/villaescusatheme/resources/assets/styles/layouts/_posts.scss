@@ -1,0 +1,157 @@
+.swiper-slide,
+.swiper-container,
+.swiper-wrapper {
+  height: 100%;
+}
+
+section.cat-foto {
+  height: calc(#{$altura} - #{$foto});
+
+  @include media-breakpoint-up (sm) {
+    margin-right: -55px;
+  }
+
+  h1 {
+    font-weight: 400;
+
+    &::after {
+      content: "\2022";
+      padding-left: 5px;
+      padding-right: 5px;
+      font-style: normal;
+    }
+
+    @include media-breakpoint-up (sm) {
+      font-size: 1.375em;
+      font-style: italic;
+      display: inline;
+    }
+  }
+}
+
+.section-block {
+  display: inline-block;
+  max-height: 100%;
+
+  img {
+    max-height: 100%;
+  }
+
+  @include media-breakpoint-up (sm) {
+    height: 90% !important;
+  }
+}
+
+.swiper-slide.grande {
+  width: 55%;
+
+  &:last-of-type {
+    //padding-right: 15%;
+  }
+
+  img {
+    padding-bottom: 25px;
+  }
+}
+
+.swiper-slide.mediana {
+  //width: auto !important;
+  width: 35%;
+  padding-left: 7%;
+
+  &:last-of-type {
+    padding-right: 7%;
+    padding-left: 0;
+  }
+}
+
+.swiper-slide.pequeña {
+  //width: auto !important;
+  width: 25%;
+  padding-left: 15%;
+
+  &:last-of-type {
+    padding-left: 0;
+    padding-right: 15%;
+  }
+}
+
+.title-work-foto {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  span {
+    font-style: italic;
+  }
+}
+
+////////category postproduccion///////////
+
+//para el Masonry
+.grid {
+  article,
+  .grid-sizer {
+    @include make-col-ready();
+
+    @include media-breakpoint-up(sm) {
+      @include make-col(6);
+    }
+  }
+
+  .grid-item {
+    @include media-breakpoint-up(sm) {
+      @include make-col(6);
+
+      margin-bottom: ($gutter*2);
+    }
+
+    @include media-breakpoint-up (lg) {
+      margin-bottom: ($gutter*4);
+    }
+
+    .box-postproducion {
+      @include media-breakpoint-up (sm) {
+        width: 80%;
+      }
+    }
+
+    img {
+      @include grayscale_element(100%);
+
+      transition: all 0.2s ease-in-out 0.2s;
+      //width: 80%;
+
+      &:hover,
+      &:focus {
+        @include grayscale_element(0);
+      }
+    }
+
+    &:nth-of-type(1) {
+      @include media-breakpoint-up (sm) {
+        img {
+          float: left;
+        }
+      }
+    }
+
+    &:nth-child(2n) {
+      img {
+        @extend .mx-sm-auto ;
+        @extend .d-sm-block ;
+      }
+    }
+
+    &:nth-child(2n+1) {
+      //border: 1px solid red;
+
+      .box-postproducion {
+        @extend .ml-sm-auto ;
+        //@extend .d-sm-block ;
+
+        //border: 1px solid red;
+      }
+    }
+  }
+}

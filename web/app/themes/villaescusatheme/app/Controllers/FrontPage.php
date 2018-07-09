@@ -1,6 +1,6 @@
 <?php
 
-namespace App;
+namespace App\Controllers;
 
 use Sober\Controller\Controller;
 
@@ -11,5 +11,8 @@ class FrontPage extends Controller
         if ($images) {
             return $images;
         }
+    }
+    public function link_home() {
+        return get_permalink(14);
     }
 }

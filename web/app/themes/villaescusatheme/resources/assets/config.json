@@ -8,7 +8,7 @@
       "./scripts/customizer.js"
     ]
   },
-  "publicPath": "app/themes/villaescusatheme",
+  "publicPath": "/app/themes/villaescusatheme",
   "devUrl": "http://estervillaescusa.com",
   "proxyUrl": "http://localhost:3000",
   "cacheBusting": "[name]_[hash:8]",

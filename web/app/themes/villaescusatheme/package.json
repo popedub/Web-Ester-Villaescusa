@@ -103,9 +103,16 @@
     "yargs": "~11.0.0"
   },
   "dependencies": {
-    "bootstrap": "v4.1.1",
-    "fullpage.js": "^3.0.1",
+    "bootstrap": "v4.1.0",
+    "imagesloaded": "^4.1.4",
     "jquery": "^3.3.1",
-    "popper.js": "^1.14.3"
+    "jquery-bridget": "^2.0.1",
+    "lg-autoplay": "^1.0.4",
+    "lg-fullscreen": "^1.0.1",
+    "lightgallery.js": "^1.0.3",
+    "masonry-layout": "^4.2.2",
+    "popper.js": "^1.14.3",
+    "smoothstate": "^0.7.2",
+    "swiper": "^4.3.3"
   }
 }

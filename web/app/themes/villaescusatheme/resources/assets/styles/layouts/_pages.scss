@@ -1,0 +1,100 @@
+////////inio slide home///////////
+//https://www.the-art-of-web.com/css/fading-slideshow-no-jquery/
+#slider-home {
+  position: fixed;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+}
+
+#slider-home a img {
+  //https://css-tricks.com/perfect-full-page-background-image/
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  min-width: 50%;
+  min-height: 50%;
+}
+
+#slider-home a {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  min-width: 50%;
+  min-height: 50%;
+
+  &:nth-of-type(1) {
+    animation-name: fader;
+    animation-delay: 6s;
+    animation-duration: 3s;
+    z-index: 20;
+  }
+
+  &:nth-of-type(2) {
+    z-index: 10;
+  }
+
+  &:nth-of-type(n+3) {
+    display: none;
+  }
+}
+
+@keyframes fader {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+//////////end slide Home///////////
+/////////pagina de inicio/////////
+.box-inicio {
+  @include make-row ;
+
+  height: calc(#{$altura} - #{$header});
+  font-size: 1.5em;
+}
+
+.col-izq,
+.col-der {
+  @include make-col-ready ;
+
+  text-align: center;
+
+  @extend .flex-sm-column ;
+  @extend .d-sm-flex ;
+  @extend .justify-content-sm-center ;
+
+  @include media-breakpoint-up (sm) {
+    @include make-col (6);
+  }
+}
+
+.col-der {
+  @include media-breakpoint-up (sm) {
+    border-left: 2px solid;
+  }
+}
+
+.cat {
+  a img { /* stylelint-disable */
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+    @extend .img-fluid ;
+  }
+   a:hover img{
+    visibility: visible;
+    opacity: 1;
+    //transition: visibility 0s, opacity 0.5s ease-in-out;
+  }
+}/* stylelint-enable */

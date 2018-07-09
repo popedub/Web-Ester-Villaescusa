@@ -2,5 +2,23 @@
 @import "~bootstrap/scss/functions";
 
 $theme-colors: (
-  primary: #525ddc
+  primary: #000
 );
+
+//para calcular la altura
+$altura: 100vh;
+$header: 153px; //altura del header + footer outbox
+$foto: 178px; //altura de header + footer en la cat de fotografia
+
+//gutter general
+$gutter: 25px;
+
+$lightgallery-path: '~lightgallery.js/src/';
+$lg-path-fonts: '#{$lightgallery-path}fonts';
+$lg-path-images: '#{$lightgallery-path}img';
+
+@mixin grayscale_element($value) {
+  -webkit-filter: #{"grayscale(#{$value})"};
+  -moz-filter: #{"grayscale(#{$value})"};
+  filter: #{"grayscale(#{$value})"};
+}
