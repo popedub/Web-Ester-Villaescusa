@@ -2,6 +2,7 @@ export default {
 
   init() {
     // JavaScript to be fired on all pages
+    $('#menu-item-102').find('a').wrap('<p id="btn-contacto-mob"></p>');
   },
   finalize() {
     // JavaScript to be fired on all pages, after page specific JS is fired
@@ -14,6 +15,14 @@ export default {
       $('.box-footer').slideToggle({
         direction: "down",
       }, 300);
+    }); // end click
+    $('#btn-contacto-mob').click(function () {
+      $(window).scrollTop(0);
+      $('.box-footer').slideToggle({
+        direction: "up",
+      }, 300);
+
+      //console.log('hola');
     }); // end click
   },
 

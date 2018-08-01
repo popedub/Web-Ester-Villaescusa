@@ -4,11 +4,15 @@
 $theme-colors: (
   primary: #000
 );
-
+//bg-color;
+$bg: #f0f0f0;
 //para calcular la altura
 $altura: 100vh;
-$header: 153px; //altura del header + footer outbox
-$foto: 178px; //altura de header + footer en la cat de fotografia
+$header: 154px; //altura del header + footer outbox
+$foto: 100px; //altura de header + footer en la cat de fotografia
+$post: 124px; //altura del header para la vista indivudual en postproduccion
+$post-mobil: 63px; //altura del menu
+$modal-body: 120px; //altura para el modal en el telefono
 
 //gutter general
 $gutter: 25px;
@@ -22,3 +26,11 @@ $lg-path-images: '#{$lightgallery-path}img';
   -moz-filter: #{"grayscale(#{$value})"};
   filter: #{"grayscale(#{$value})"};
 }
+
+//tipogragía
+
+$tipo-header: 1.5rem;
+$tipo-foto-grande: 1.375em;
+
+$tipo-foto-mobil: 0.875em;
+$tipo-titular-mobil: 1.125em;

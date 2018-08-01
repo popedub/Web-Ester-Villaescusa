@@ -1,18 +1,49 @@
 footer.content-info {
   padding-top: $gutter;
-  font-size: 1.5em;
-  line-height: 24px;
-}
+  font-size: 1.125em;
+  // line-height: 24px;
 
-body.category-2 {
-  footer.content-info {
-    padding-top: ($gutter*2);
+  @include media-breakpoint-up (lg) {
+    font-size: 1.5em;
+    line-height: 24px;
   }
 }
 
+#btn-contacto {
+  cursor: pointer;
+  margin-bottom: 0;
+  display: none;
+
+  @include media-breakpoint-up (lg) {
+    display: block;
+  }
+}
+//TEMPLATE INICIO
+body.template-inicio {
+  #btn-contacto {
+    display: block;
+  }
+}
+
+//CATEGORIA FOTOGRAFIA
+body.category-2 {
+  footer.content-info {
+    padding-top: 0;
+  }
+
+  @include media-breakpoint-up (lg) {
+    .btn-cont {
+      position: absolute;
+      right: 25px;
+      bottom: 25px;
+      z-index: 9;
+    }
+  }
+}
+//CATEGORY POSTPRODUCCION
 body.category-3 {
   footer.content-info {
-    @include media-breakpoint-up (sm) {
+    @include media-breakpoint-up (lg) {
       position: fixed;
       bottom: 0;
       left: 0;
@@ -26,14 +57,59 @@ body.category-3 {
 
 .idiomas,
 .btn-cont {
+  padding-left: 15px;
+  padding-right: 15px;
+
   @include make-col(6);
+
+  @include media-breakpoint-up (md) {
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
 
 .btn-cont {
-  @include media-breakpoint-up (sm) {
-    text-align: right;
+  text-align: right;
+}
+
+//VISTA INDIVIDUAL///
+body.single {
+  footer.footer-post {
+    padding-top: 0 !important;
+    position: absolute;
+    bottom: 15px;
+    width: 100%;
+    left: 0;
+    z-index: 15;
+
+    .btn-cont {
+      position: absolute;
+      right: 15px;
+      padding-right: 0;
+    }
+  }
+
+  @include media-breakpoint-up (md) {
+    .btn-cont {
+      right: 25px;
+    }
+  }
+
+  @include media-breakpoint-up (lg) {
+    footer.footer-post {
+      //bottom: 25px;
+      right: 0;
+      z-index: 1040;
+    }
+
+    .btn-cont {
+      position: absolute;
+      right: 25px;
+      padding-right: 15px;
+    }
   }
 }
+
 ///seccion que se muestra con el click desde abajo
 .box-footer {
   display: none;
@@ -41,42 +117,85 @@ body.category-3 {
   bottom: 0;
   left: 0;
   margin: 0;
-  padding: ($gutter*2) $gutter $gutter;
-  z-index: 10;
+  padding: 15px;
   background-color: $white;
-  border-top: 2px solid;
-  line-height: 36px;
-}
+  z-index: 1060;
+  max-height: calc(#{$altura} - #{$post-mobil});
 
-#btn-contacto {
-  cursor: pointer;
-  margin-bottom: 0;
+  @include media-breakpoint-up (lg) {
+    line-height: 36px;
+    padding: ($gutter*2) $gutter $gutter;
+    z-index: 10;
+    border-top: 2px solid;
+  }
 }
 
 #btn-cerrar {
+  text-align: right;
+  bottom: 0;
+  position: absolute;
   cursor: pointer;
   z-index: 20;
   right: 15px;
 }
 
 .bio {
-  padding-bottom: ($gutter*3);
+  padding-bottom: $gutter;
+
+  @include media-breakpoint-up (lg) {
+    padding-bottom: ($gutter*3);
+  }
 }
 
 .enlaces {
   @include make-row;
 
   .box {
-    @include make-col-ready;
+    padding-left: 15px;
+    padding-right: 15px;
 
-    @include media-breakpoint-up (sm) {
+    @include make-col(6);
+
+    &:nth-child(1) {
+      @include make-col(12);
+    }
+
+    @include media-breakpoint-up (lg) {
       @include make-col(4);
+
+      &:nth-child(1) {
+        @include make-col(4);
+      }
 
       p {
         position: absolute;
         bottom: 0;
-        margin-bottom: 0;
+        //margin-bottom: 0;
       }
     }
+  }
+}
+
+//SELECTOR DE IDIOMAS
+.wpml-ls-legacy-list-horizontal {
+  border: 0;
+  padding: 0;
+
+  a {
+    padding: 0 10px;
+  }
+}
+
+.wpml-ls-item-es {
+  a::after {
+    content: '––';
+    position: absolute;
+    margin: 3px 0 0 10px;
+  }
+}
+
+.wpml-ls-item-en {
+  a {
+    padding-left: 36px;
   }
 }

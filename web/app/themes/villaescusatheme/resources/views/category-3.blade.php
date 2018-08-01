@@ -6,6 +6,7 @@
     </div>
     {!! get_search_form(false) !!}
   @endif
+<section class="scene_element animtated fadeInRight">
 <div class="grid">
   <div class="grid-sizer"></div>
     @while (have_posts()) @php the_post() @endphp
@@ -14,5 +15,6 @@
     @endwhile
 
 </div>
+</section>
   {!! get_the_posts_navigation() !!}
 @endsection

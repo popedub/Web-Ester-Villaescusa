@@ -16,12 +16,13 @@ class Category3 extends Controller
         }
 
     }
-    public function fotos() {
-        global $post;
-        $fotos = get_field('galeria', $post->ID);
 
+    public static function align() {
 
-        //array_push($data, $this_row);
-        return $fotos;
+        $field = get_field_object('align_foto');
+        $value = $field['value'];
+        if($value){
+            return $value;
+        }
     }
 }

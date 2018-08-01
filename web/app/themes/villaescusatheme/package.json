@@ -103,16 +103,18 @@
     "yargs": "~11.0.0"
   },
   "dependencies": {
+    "animate.css": "^3.6.1",
     "bootstrap": "v4.1.0",
     "imagesloaded": "^4.1.4",
     "jquery": "^3.3.1",
     "jquery-bridget": "^2.0.1",
     "lg-autoplay": "^1.0.4",
     "lg-fullscreen": "^1.0.1",
-    "lightgallery.js": "^1.0.3",
+    "lightgallery": "^1.6.11",
     "masonry-layout": "^4.2.2",
     "popper.js": "^1.14.3",
     "smoothstate": "^0.7.2",
-    "swiper": "^4.3.3"
+    "swiper": "^4.3.3",
+    "swup": "^0.4.1"
   }
 }

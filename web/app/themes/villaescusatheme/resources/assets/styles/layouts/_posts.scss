@@ -10,23 +10,10 @@ section.cat-foto {
   @include media-breakpoint-up (sm) {
     margin-right: -55px;
   }
+}
 
-  h1 {
-    font-weight: 400;
-
-    &::after {
-      content: "\2022";
-      padding-left: 5px;
-      padding-right: 5px;
-      font-style: normal;
-    }
-
-    @include media-breakpoint-up (sm) {
-      font-size: 1.375em;
-      font-style: italic;
-      display: inline;
-    }
-  }
+.swiper-container-h .swiper-wrapper {
+  align-items: center;
 }
 
 .section-block {
@@ -38,7 +25,7 @@ section.cat-foto {
   }
 
   @include media-breakpoint-up (sm) {
-    height: 90% !important;
+    height: auto;//90% !important;
   }
 }
 
@@ -80,9 +67,39 @@ section.cat-foto {
   position: absolute;
   bottom: 0;
   left: 0;
+  display: inline-flex;
+
+  @include media-breakpoint-up (md) {
+    display: block;
+  }
 
   span {
     font-style: italic;
+    font-size: $tipo-foto-mobil;
+    line-height: 16.8px;
+
+    @include media-breakpoint-up (md) {
+      font-size: 1rem;
+      line-height: 1;
+    }
+  }
+
+  h1 {
+    font-weight: 400;
+    font-size: $tipo-foto-mobil;
+
+    &::after {
+      content: "\2022";
+      padding-left: 5px;
+      padding-right: 5px;
+      font-style: normal;
+    }
+
+    @include media-breakpoint-up (md) {
+      font-size: $tipo-foto-grande;
+      font-style: italic;
+      display: inline;
+    }
   }
 }
 
@@ -94,16 +111,19 @@ section.cat-foto {
   .grid-sizer {
     @include make-col-ready();
 
-    @include media-breakpoint-up(sm) {
+    @include media-breakpoint-up(md) {
       @include make-col(6);
     }
   }
 
   .grid-item {
-    @include media-breakpoint-up(sm) {
+    margin-top: ($gutter*2);
+
+    @include media-breakpoint-up(md) {
       @include make-col(6);
 
       margin-bottom: ($gutter*2);
+      margin-top: 0;
     }
 
     @include media-breakpoint-up (lg) {
@@ -111,8 +131,31 @@ section.cat-foto {
     }
 
     .box-postproducion {
-      @include media-breakpoint-up (sm) {
+      @extend .text-center ;
+      @extend .text-md-left ;
+
+      @include media-breakpoint-up (md) {
         width: 80%;
+      }
+
+      h1 {
+        font-size: $tipo-titular-mobil;
+        margin-top: $gutter;
+      }
+    }
+
+    @include media-breakpoint-up (md) {
+      .box-postproducion.izq {
+        float: left;
+      }
+
+      .box-postproducion.der {
+        float: right;
+      }
+
+      .box-postproducion.centro {
+        margin-left: auto !important;
+        margin-right: auto !important;
       }
     }
 
@@ -127,31 +170,155 @@ section.cat-foto {
         @include grayscale_element(0);
       }
     }
+  }
+}
 
-    &:nth-of-type(1) {
-      @include media-breakpoint-up (sm) {
-        img {
-          float: left;
-        }
-      }
+//VISTA INDIVIDUAL///
+.single-post-produccion {
+  @include media-breakpoint-up (md) {
+    height: calc(#{$altura} - #{$post});
+  }
+
+  .swiper-slide {
+    height: calc(#{$altura} - #{$post-mobil});
+
+    @include media-breakpoint-up (md) {
+      height: 100%;
     }
+  }
 
-    &:nth-child(2n) {
-      img {
-        @extend .mx-sm-auto ;
-        @extend .d-sm-block ;
-      }
-    }
+  .swiper-container,
+  .swiper-wrapper {
+    height: 100%;
+  }
 
-    &:nth-child(2n+1) {
-      //border: 1px solid red;
+  .swiper-wrapper {
+    align-items: center;
+  }
+}
 
-      .box-postproducion {
-        @extend .ml-sm-auto ;
-        //@extend .d-sm-block ;
+.fx {
+  display: none;
+}
 
-        //border: 1px solid red;
-      }
-    }
+.inner {
+  @extend .mx-lg-auto ;
+  @extend .d-flex ;
+  @extend .align-items-center ;
+
+  height: calc(#{$altura} - #{$post-mobil});
+  padding: 0 $gutter;
+
+  @include media-breakpoint-up (lg) {
+    width: 65%;
+    display: block;
+    height: auto;
+    padding: 0;
+  }
+}
+
+.swiper-button-next-custom {
+  @extend .d-none ;
+  @extend .d-lg-block ;
+
+  position: absolute;
+  top: 50%;
+  right: 80px;
+  left: auto;
+  width: 27px;
+  height: 44px;
+  margin-top: -64px;
+  z-index: 10;
+  cursor: pointer;
+  background-size: 27px 44px;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  &::before {
+    content: '+';
+    font-size: 64px;
+    font-weight: lighter;
+    margin-top: -22px;
+  }
+}
+
+.swiper-button-prev {
+  display: none;
+}
+
+.swiper-pagination-custom {
+  width: 50%;
+  text-align: left;
+  bottom: 15px;
+
+  @include media-breakpoint-up (md) {
+    bottom: 0;
+    text-align: left;
+    width: 100%;
+  }
+}
+
+.caption-single {
+  @include media-breakpoint-up (lg) {
+    position: absolute;
+    right: 40%;
+    bottom: 0;
+  }
+}
+
+.modal-dialog {
+  max-width: 100%;
+  height: 90vh;
+  margin-top: 63px; //altura del menu
+
+  @include media-breakpoint-up (md) {
+    height: $altura;
+    margin: 0;
+  }
+}
+
+.modal-open .modal {
+  overflow-y: hidden;
+}
+
+.modal-header {
+  font-size: $tipo-header;
+  border-bottom: none;
+  display: none;
+
+  @include media-breakpoint-up (md) {
+    padding: $gutter $gutter 0;
+    display: flex;
+  }
+}
+
+.modal-body,
+.modal-footer {
+  @include media-breakpoint-up (md) {
+    padding: 0 $gutter;
+    border-top: none;
+  }
+}
+
+.modal-body {
+  height: calc(#{$altura} - #{$modal-body});
+
+  @include media-breakpoint-up (md) {
+    height: calc(#{$altura} - #{$foto});
+  }
+}
+
+.modal-content {
+  border: none;
+
+  @include media-breakpoint-up (md) {
+    height: 100%;
+  }
+}
+
+.modal-footer {
+  @include media-breakpoint-up (md) {
+    padding-bottom: $gutter;
+    font-size: $tipo-header;
   }
 }

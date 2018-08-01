@@ -1,6 +1,6 @@
 <div class="box-footer">
   <div class="bio">
-    {{$contact}}
+    {!! $contact !!}
   </div>
   <div class="enlaces">
     <div class="box">

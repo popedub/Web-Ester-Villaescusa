@@ -1,7 +1,7 @@
 // import external dependencies
 import 'jquery';
 import 'smoothstate/src/jquery.smoothState.js';
-import 'lightgallery.js/dist/js/lightgallery.min';
+import 'lightgallery/dist/js/lightgallery-all.min.js';
 // Import everything from autoload
 import "./autoload/**/*"
 
@@ -11,7 +11,9 @@ import common from './routes/common';
 import category2 from './routes/category2';
 import category3 from './routes/category3';
 import home from './routes/home';
+import templateInicio from './routes/templateInicio';
 import aboutUs from './routes/about';
+import single from './routes/single';
 
 /** Populate Router instance with DOM routes */
 const routes = new Router({
@@ -23,6 +25,8 @@ const routes = new Router({
   aboutUs,
   category2,
   category3,
+  single,
+  templateInicio,
 });
 
 // Load Events
