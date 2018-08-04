@@ -28,7 +28,7 @@ export default {
           centeredSlides: true,
           navigation: {
             nextEl: '.swiper-button-next-custom',
-            prevEl: '.swiper-button-prev',
+            prevEl: '.swiper-button-prev-custom',
           },
           pagination: {
             el: '.swiper-pagination',
@@ -45,11 +45,14 @@ export default {
           direction: 'horizontal',
           speed: 1000,
           effect: 'fade',
+          fadeEffect: {
+            crossFade: true
+          },
           slidesPerView: 1,
           centeredSlides: true,
           navigation: {
             nextEl: '.swiper-button-next-custom',
-            prevEl: '.swiper-button-prev',
+            prevEl: '.swiper-button-prev-custom',
           },
           pagination: {
             el: '.swiper-pagination',

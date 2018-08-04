@@ -76,7 +76,9 @@ export default {
               on: {
                 slideNextTransitionStart: function () {
 
-                  $('.item-to-change a').text('EV');
+                  if ($('.item-to-change a').text() == 'Ester Villaescusa') {
+                    $('.item-to-change a').hide().text('EV').fadeIn('slow');
+                  }
 
                 },
                 reachBeginning: function () {
@@ -92,12 +94,14 @@ export default {
             direction: 'horizontal',
             speed: 1000,
             slidesPerView: 3,
-            spaceBetween: 50,
+            spaceBetween: 350,
+            slidesOffsetAfter: 650,
             freeMode: true,
             breakpoints: {
               768: {
                 slidesPerView: 1,
                 spaceBetween: 20,
+                slidesOffsetAfter: 0,
               },
             },
           });
@@ -136,6 +140,10 @@ export default {
   },
   finalize() {
     // JavaScript to be fired on the home page, after the init JS
+    $('#menu-item-54 > a').addClass('no-smoothState');
+
+    //eliminamos la clase de dónde tomamos las clases del body una vez asiganadas nuevamente
+    $('#replace').remove();
 
     $(window).on('load', function () {
 
@@ -155,12 +163,6 @@ export default {
         //console.log('layout is complete');
       });
       $container.imagesLoaded(function () {
-        //  $container.masonry({
-        //   itemSelector: '.grid-item',
-        //   columnWidth: '.grid-sizer',
-        //   percentPosition: true,
-        //   initLayout: false,
-        // });
         $container.masonry();
       });
 

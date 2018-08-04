@@ -21,7 +21,7 @@
       </div>
       @endwhile
     </div>
-</div>
+  </div>
 </section>
   {!! get_the_posts_navigation() !!}
 @endsection

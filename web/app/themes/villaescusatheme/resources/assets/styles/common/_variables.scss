@@ -8,18 +8,16 @@ $theme-colors: (
 $bg: #f0f0f0;
 //para calcular la altura
 $altura: 100vh;
-$header: 154px; //altura del header + footer outbox
+$header: 163px; //altura del header + footer outbox
 $foto: 100px; //altura de header + footer en la cat de fotografia
-$post: 124px; //altura del header para la vista indivudual en postproduccion
+$post: 134px; //altura del header para la vista indivudual en postproduccion
 $post-mobil: 63px; //altura del menu
 $modal-body: 120px; //altura para el modal en el telefono
+$incio-mobil: 123px; //pagina incio header + footer
+$menu-mob: 38px; //altura del menu - el padding del body
 
 //gutter general
-$gutter: 25px;
-
-$lightgallery-path: '~lightgallery.js/src/';
-$lg-path-fonts: '#{$lightgallery-path}fonts';
-$lg-path-images: '#{$lightgallery-path}img';
+$gutter: 35px;
 
 @mixin grayscale_element($value) {
   -webkit-filter: #{"grayscale(#{$value})"};

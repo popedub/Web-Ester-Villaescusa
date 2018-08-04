@@ -20,6 +20,18 @@ footer.content-info {
 }
 //TEMPLATE INICIO
 body.template-inicio {
+  footer.content-info {
+    padding-top: 0;
+    bottom: 15px;
+    position: absolute;
+    width: 100%;
+
+    @include media-breakpoint-up (lg) {
+      position: relative;
+      bottom: 0;
+    }
+  }
+
   #btn-contacto {
     display: block;
   }
@@ -51,6 +63,12 @@ body.category-3 {
       padding-right: $gutter;
       padding-left: $gutter;
       padding-bottom: $gutter;
+    }
+
+    #btn-contacto {
+      @include media-breakpoint-up (lg) {
+        margin-top: 24px;
+      }
     }
   }
 }
@@ -86,12 +104,16 @@ body.single {
       position: absolute;
       right: 15px;
       padding-right: 0;
+
+      @include media-breakpoint-up (md) {
+        right: $gutter;
+      }
     }
   }
 
   @include media-breakpoint-up (md) {
     .btn-cont {
-      right: 25px;
+      right: $gutter;
     }
   }
 
@@ -113,7 +135,7 @@ body.single {
 ///seccion que se muestra con el click desde abajo
 .box-footer {
   display: none;
-  position: absolute;
+  position: fixed;
   bottom: 0;
   left: 0;
   margin: 0;
@@ -127,6 +149,7 @@ body.single {
     padding: ($gutter*2) $gutter $gutter;
     z-index: 10;
     border-top: 2px solid;
+    position: absolute;
   }
 }
 
@@ -137,10 +160,15 @@ body.single {
   cursor: pointer;
   z-index: 20;
   right: 15px;
+
+  @include media-breakpoint-up (sm) {
+    bottom: $gutter;
+    right: $gutter;
+  }
 }
 
 .bio {
-  padding-bottom: $gutter;
+  //padding-bottom: $gutter;
 
   @include media-breakpoint-up (lg) {
     padding-bottom: ($gutter*3);
@@ -169,8 +197,8 @@ body.single {
 
       p {
         position: absolute;
-        bottom: 0;
-        //margin-bottom: 0;
+        bottom: $gutter;
+        margin-bottom: 0;
       }
     }
   }
@@ -184,11 +212,21 @@ body.single {
   a {
     padding: 0 10px;
   }
+
+  ul {
+    list-style: none;
+    padding-left: 0 !important;
+    display: inline-block;
+  }
+
+  .wpml-ls-item {
+    float: left;
+  }
 }
 
 .wpml-ls-item-es {
   a::after {
-    content: '––';
+    content: '\2014';
     position: absolute;
     margin: 3px 0 0 10px;
   }

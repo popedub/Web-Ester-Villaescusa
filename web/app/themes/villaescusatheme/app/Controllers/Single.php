@@ -13,6 +13,7 @@ class Single extends Controller
          $this_foto = (object) array(
              'foto' => wp_get_attachment_image( $image['ID'], 'full', false, array('class' => 'img-fluid mx-auto d-block') ),
              'caption' => $image ['caption'],
+             'url' => $image['url'],
          );
            array_push($data, $this_foto);
         }

@@ -1,7 +1,7 @@
 // import external dependencies
 import 'jquery';
 import 'smoothstate/src/jquery.smoothState.js';
-import 'lightgallery/dist/js/lightgallery-all.min.js';
+// import 'progress-js/src/progress.js';
 // Import everything from autoload
 import "./autoload/**/*"
 

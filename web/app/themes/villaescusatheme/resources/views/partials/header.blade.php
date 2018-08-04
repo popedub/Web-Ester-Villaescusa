@@ -28,7 +28,7 @@
       @if (is_single())
         <div class="menu-single d-none d-lg-block">
           <ul id="menu-post" class="nav">
-            <li class="menu-item">{{ get_the_title() }}</li>
+            <li class="menu-item current-menu-item">{{ get_the_title() }}</li>
             <li class="menu-item al-centro"><a href="{{ home_url('/inicio') }}">EV</a></li>
             <li class="menu-item">
               <a href="#info" role="button">Info</a>

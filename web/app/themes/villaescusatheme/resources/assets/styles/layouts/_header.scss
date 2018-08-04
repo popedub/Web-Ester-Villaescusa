@@ -47,6 +47,18 @@ body.single {
   }
 }
 
+body.template-inicio {
+  #menu-menu-1,
+  #menu-post {
+    @extend .justify-content-sm-center ;
+
+    @include media-breakpoint-up(sm) {
+      font-size: $tipo-header;
+      line-height: 24px;
+    }
+  }
+}
+
 .al-centro {
   position: absolute;
   left: 50%;
@@ -75,6 +87,19 @@ body.single {
   }
 }
 
+////////////CATGORIA FOTOGRAFIA///////////
+body.category-2 {
+  .sticky-top {
+    @include media-breakpoint-up (lg) {
+      padding-bottom: 10px;
+    }
+  }
+}
+
+.item-to-change {
+  animation: fadeIn 1s;
+}
+
 /////////MENU TELEFONO//////////
 .nav-primary {
   @include media-breakpoint-down(md) {//estaba en xl
@@ -84,7 +109,7 @@ body.single {
     text-align: center;
     transition: all 0.1s ease;
     width: 100%;
-    margin-top: 35px;
+    font-size: $tipo-header;
     visibility: hidden;
   }
 
@@ -109,6 +134,7 @@ body.single {
   @include media-breakpoint-down(md) {
     height: calc(#{$altura/2} - #{$post-mobil});
     width: 100%;
+    font-size: $tipo-titular-mobil;
   }
 }
 
@@ -139,6 +165,7 @@ body.single {
 
   .cerrar-menu {
     display: none;
+    font-size: $tipo-header;
   }
 
   span {
@@ -175,7 +202,9 @@ body.single {
 
   &:checked ~ .nav-primary {
     opacity: 1;
-    height: calc(#{$altura} - #{$post-mobil});
+    height: calc(#{$altura} - #{$menu-mob});
+    font-size: $tipo-header;
+    width: 100%;
     visibility: visible;
     display: block;
     transition: all 0.3s ease-in-out;
@@ -190,8 +219,8 @@ body.single {
   &:checked ~ .label-toggle .cerrar-menu {
     display: block;
     cursor: pointer;
-    position: absolute;
-    bottom: 0;
+    position: fixed;
+    bottom: 15px;
     right: 15px;
   }
 

@@ -48,6 +48,9 @@ add_action('after_setup_theme', function () {
      * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
      */
     add_theme_support('post-thumbnails');
+    add_image_size('postproduccion-large', 620, 9999, false);
+    add_image_size('postproduccion-medium', 500, 9999, false);
+    add_image_size('postproduccion-small', 360, 9999, false);
 
     /**
      * Enable HTML5 markup support

@@ -53,12 +53,14 @@ export default {
           //volvemos a disparar los javascrips, en las dos categorías igual, :()
           ////////item menu contacto en el telefono///////
           $('#menu-item-102').find('a').wrap('<p id="btn-contacto-mob"></p>');
+
           $('#btn-contacto-mob').click(function () {
             $('.box-footer').slideToggle({
               direction: "up",
             }, 300);
             $(window).scrollTop(0);
           }); // end click
+
           /////////masonry y sus librerias////////
           imagesLoaded.makeJQueryPlugin($);
           //container
@@ -91,11 +93,13 @@ export default {
               forceToAxis: true,
               a11y: false,
               //init: false,
-              autoHeight: true,
+              //autoHeight: true,
               on: {
                 slideNextTransitionStart: function () {
 
-                  $('.item-to-change a').text('EV');
+                  if ($('.item-to-change a').text() == 'Ester Villaescusa') {
+                    $('.item-to-change a').hide().text('EV').fadeIn('slow');
+                  }
 
                 },
                 reachBeginning: function () {
@@ -112,11 +116,13 @@ export default {
               speed: 1000,
               slidesPerView: 3,
               spaceBetween: 50,
+              slidesOffsetAfter: 650,
               freeMode: true,
               breakpoints: {
                 768: {
                   slidesPerView: 1,
                   spaceBetween: 20,
+                  slidesOffsetAfter: 0,
                 },
               },
             });
@@ -129,7 +135,7 @@ export default {
 
     $(window).on('load', function () {
       //initialize swiper when document ready
-
+      $('#menu-item-54 > a').addClass('no-smoothState');
       var mySwiperV = new Swiper('.swiper-container-v', {
         // Optional parameters
         direction: 'vertical',
@@ -140,36 +146,46 @@ export default {
         forceToAxis: true,
         a11y: false,
         //init: false,
-        autoHeight: true,
+        //autoHeight: true,
         on: {
           slideNextTransitionStart: function () {
+            if ($('.item-to-change a').text() =='Ester Villaescusa'){
+              $('.item-to-change a').hide().text('EV').fadeIn('slow');
+            }
 
-              $('.item-to-change a').text('EV');
 
         },
           reachBeginning: function () {
 
-            $('.item-to-change a').text('Ester Villaescusa');
+            $('.item-to-change a').hide().text('Ester Villaescusa').fadeIn('slow');
 
           },
       },
 
       });
+
       var mySwiperH = new Swiper('.swiper-container-h', {
         // Optional parameters
         direction: 'horizontal',
         speed: 1000,
         slidesPerView: 3,
+        slidesOffsetAfter: 650,
         spaceBetween: 50,
         freeMode: true,
         breakpoints: {
           768: {
             slidesPerView: 1,
             spaceBetween: 20,
+            slidesOffsetAfter: 0,
           },
         },
       });
        /* eslint-enable */
+
+
+
+        //eliminamos la clase de dónde tomamos las clases del body una vez asiganadas nuevamente
+        $('#replace').remove();
 
     });
 
