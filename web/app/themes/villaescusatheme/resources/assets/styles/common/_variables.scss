@@ -4,12 +4,22 @@
 $theme-colors: (
   primary: #000
 );
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1360px
+) !default;
 //bg-color;
 $bg: #f0f0f0;
 //para calcular la altura
 $altura: 100vh;
-$header: 163px; //altura del header + footer outbox
-$foto: 100px; //altura de header + footer en la cat de fotografia
+$header: 176px; //altura del header + footer outbox
+$foto: 105px; //altura de header + footer en la cat de fotografia
+$foto-lg: 117px; //altura de header + footer en la cat de fotografia
 $post: 134px; //altura del header para la vista indivudual en postproduccion
 $post-mobil: 63px; //altura del menu
 $modal-body: 120px; //altura para el modal en el telefono

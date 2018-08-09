@@ -3,6 +3,7 @@ export default {
   init() {
     // JavaScript to be fired on all pages
     $('#menu-item-102').find('a').wrap('<p id="btn-contacto-mob"></p>');
+    $('#menu-item-196').find('a').wrap('<p id="btn-contacto-mob"></p>');
 
   },
   finalize() {

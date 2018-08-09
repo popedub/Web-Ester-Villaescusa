@@ -3,20 +3,55 @@ export default {
   init() {
     $(document).ready(function(){
 
-      $('a[href ="#info"]').click(function() {
-        console.log('click');
-        $('#info').modal({
-          backdrop: false,
+      /* -------------------------------------------------------
+      | Here is were the fun begins.
+        --------------------------------------------------------- */
+      //https://stackoverflow.com/questions/32168234/change-the-bootstrap-modal-effect
+      /* eslint-disable */
+      var modalBtn = $('a[href ="#info"]');
+      var modal = $('#info');
+      var animInClass = "";
+      var animOutClass = "";
+
+
+      modalBtn.on('click', function () {
+        animInClass = 'fadeIn';
+        animOutClass = 'fadeOut';
+        if (animInClass == '' || animOutClass == '') {
+          alert("Please select an in and out animation type.");
+        } else {
+          modal.addClass(animInClass);
+          modal.modal({ backdrop: false });
         }
+      })
 
-        );
+      modal.on('show.bs.modal', function () {
+        var closeModalBtns = modal.find('a[data-custom-dismiss="modal"]');
+        closeModalBtns.one('click', function () {
+          modal.on('webkitAnimationEnd oanimationend msAnimationEnd animationend', function (evt) {
+            modal.modal('hide')
+          });
+          modal.removeClass(animInClass).addClass(animOutClass);
+        })
+      })
 
-      });
+      modal.on('hidden.bs.modal', function (evt) {
+        var closeModalBtns = modal.find('a[data-custom-dismiss="modal"]');
+        modal.removeClass(animOutClass)
+        modal.off('webkitAnimationEnd oanimationend msAnimationEnd animationend')
+        closeModalBtns.off('click')
+      })
+
     });
 
     $(window).on("load", function () {
+
+      $('img').filter(function (){
+        var $this = $(this);
+        return $this.width() < $this.height();
+      }).closest('div.inner').addClass("vertical");
       //initialize swiper when document ready
-      /* eslint-disable */
+
       var fx = $('.fx').text().trim();
 
       if(fx === 'slide'){
@@ -25,6 +60,7 @@ export default {
           direction: 'horizontal',
           speed: 1000,
           slidesPerView: 1,
+          loop: true,
           centeredSlides: true,
           navigation: {
             nextEl: '.swiper-button-next-custom',
@@ -43,8 +79,9 @@ export default {
         var mySwiperH = new Swiper('.swiper-container', {
           // Optional parameters
           direction: 'horizontal',
-          speed: 1000,
+          speed: 1500,
           effect: 'fade',
+          loop: true,
           fadeEffect: {
             crossFade: true
           },

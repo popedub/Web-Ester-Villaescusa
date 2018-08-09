@@ -32,10 +32,18 @@ class App extends Controller
     }
     public function contact()
     {
-        $post = [];
-        $post   = get_post( 16, ARRAY_A  );
-        $content = $post['post_content'];
-        return $content;
+        // $post = [];
+        // $post   = get_post( 16, ARRAY_A  );
+        // $content = $post['post_content'];
+        return get_field('biografia', 16);
+    }
+
+    public function contact_en()
+    {
+        // $post = [];
+        // $post   = get_post( 16, ARRAY_A  );
+        // $content = $post['post_content'];
+        return get_field('biografia', 191);
     }
     public function email()
     {

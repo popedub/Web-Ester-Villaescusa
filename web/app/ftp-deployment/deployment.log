@@ -1,5 +1,5 @@
 Creating temporary directory /var/folders/04/shr__7wx1cb5lp950jg8g10r0000gn/T/deployment
-Started at [2018/08/04 14:43]
+Started at [2018/08/09 12:01]
 Config file is /Users/pope/Documents/SITES/estervillaescusa.com/site/web/app/ftp-deployment/deployment.ini
 
 Deploying my site
@@ -1130,35 +1130,23 @@ Ignoring ./vendor
 Creating remote file .htdeployment.running
 
 Uploading:
-( 1 of 12) /.cache-loader/0b988dc8faf8c6107dd0b76e718c1350.json
-( 2 of 12) /.cache-loader/34a83de751ced476d5315dded23b7174.json
-( 3 of 12) /.cache-loader/5f7ef644fb7b342caa9217d1ad117dd4.json
-( 4 of 12) /.cache-loader/c5369fb60f3598c4daf92418cd7aeacb.json
-( 5 of 12) /.cache-loader/f524dcd87195c83d431e0f0b695008e1.json
-( 6 of 12) /dist/scripts/customizer.js.map
-( 7 of 12) /dist/scripts/main.js
-( 8 of 12) /dist/scripts/main.js.map
-( 9 of 12) /dist/styles/main.css
-(10 of 12) /dist/styles/main.css.map
-(11 of 12) /resources/views/partials/content-single.blade.php
-(12 of 12) /.htdeployment
+(1 of 6) /.cache-loader/092d9a8880dc3aa8d4fed8eeef89719f.json
+(2 of 6) /.cache-loader/34a83de751ced476d5315dded23b7174.json
+(3 of 6) /app/Controllers/App.php
+(4 of 6) /app/Untitled-1
+(5 of 6) /resources/views/partials/contacto-footer.blade.php
+(6 of 6) /.htdeployment
 
 Renaming:
-( 1 of 12) Renaming /.cache-loader/0b988dc8faf8c6107dd0b76e718c1350.json
-( 2 of 12) Renaming /.cache-loader/34a83de751ced476d5315dded23b7174.json
-( 3 of 12) Renaming /.cache-loader/5f7ef644fb7b342caa9217d1ad117dd4.json
-( 4 of 12) Renaming /.cache-loader/c5369fb60f3598c4daf92418cd7aeacb.json
-( 5 of 12) Renaming /.cache-loader/f524dcd87195c83d431e0f0b695008e1.json
-( 6 of 12) Renaming /dist/scripts/customizer.js.map
-( 7 of 12) Renaming /dist/scripts/main.js
-( 8 of 12) Renaming /dist/scripts/main.js.map
-( 9 of 12) Renaming /dist/styles/main.css
-(10 of 12) Renaming /dist/styles/main.css.map
-(11 of 12) Renaming /resources/views/partials/content-single.blade.php
-(12 of 12) Renaming /.htdeployment
+(1 of 6) Renaming /.cache-loader/092d9a8880dc3aa8d4fed8eeef89719f.json
+(2 of 6) Renaming /.cache-loader/34a83de751ced476d5315dded23b7174.json
+(3 of 6) Renaming /app/Controllers/App.php
+(4 of 6) Renaming /app/Untitled-1
+(5 of 6) Renaming /resources/views/partials/contacto-footer.blade.php
+(6 of 6) Renaming /.htdeployment
 
 Cleaning temp/cache
 
 Deleting remote file .htdeployment.running
 
-Finished at [2018/08/04 14:44] (in 33 seconds)
+Finished at [2018/08/09 12:01] (in 17 seconds)

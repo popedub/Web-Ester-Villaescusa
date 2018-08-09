@@ -49,7 +49,7 @@ export default {
             //eliminamos la clase de dónde tomamos las clases del body una vez asiganadas nuevamente
             $('#replace').remove();
           }
-          $('#menu-item-54 > a').addClass('no-smoothState');
+
           $('#menu-item-194 > a').addClass('no-smoothState');
           //volvemos a disparar los javascrips, en las dos categorías igual, :()
           ////////item menu contacto en el telefono///////
@@ -136,8 +136,8 @@ export default {
 
     $(window).on('load', function () {
       //initialize swiper when document ready
-      $('#menu-item-54 > a').addClass('no-smoothState');
 
+      $('#menu-item-194 > a').addClass('no-smoothState');
       var mySwiperV = new Swiper('.swiper-container-v', {
         // Optional parameters
         direction: 'vertical',

@@ -92,6 +92,14 @@
     @extend .img-fluid ;
 
     display: none;
+
+    @include media-breakpoint-up (lg) {
+      max-width: 200px;
+    }
+
+    @include media-breakpoint-up (xxl) {
+      max-width: 300px;
+    }
   }
 
   @include media-breakpoint-up (lg) {
@@ -99,7 +107,7 @@
       opacity: 0;
       visibility: hidden;
       display: block;
-      //transition: all 0.3s ease-in-out;
+      transition: all 0.3s ease-in-out;
       position: absolute;
       left: 50%;
       top: 50%;
@@ -109,7 +117,7 @@
     a:hover img{
       visibility: visible;
       opacity: 1;
-      transition: all 0.3s ease-in-out;
+      //transition: all 0.3s ease-in-out;
     //transition: visibility 0s, opacity 0.5s ease-in-out;
     }
   }

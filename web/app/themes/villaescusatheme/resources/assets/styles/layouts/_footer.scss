@@ -5,7 +5,7 @@ footer.content-info {
 
   @include media-breakpoint-up (lg) {
     font-size: 1.5em;
-    line-height: 24px;
+    //line-height: 24px;
   }
 }
 
@@ -18,60 +18,6 @@ footer.content-info {
     display: block;
   }
 }
-//TEMPLATE INICIO
-body.template-inicio {
-  footer.content-info {
-    padding-top: 0;
-    bottom: 15px;
-    position: absolute;
-    width: 100%;
-
-    @include media-breakpoint-up (lg) {
-      position: relative;
-      bottom: 0;
-    }
-  }
-
-  #btn-contacto {
-    display: block;
-  }
-}
-
-//CATEGORIA FOTOGRAFIA
-body.category-2 {
-  footer.content-info {
-    padding-top: 0;
-  }
-
-  @include media-breakpoint-up (lg) {
-    .btn-cont {
-      position: absolute;
-      right: 25px;
-      bottom: 25px;
-      z-index: 9;
-    }
-  }
-}
-//CATEGORY POSTPRODUCCION
-body.category-3 {
-  footer.content-info {
-    @include media-breakpoint-up (lg) {
-      position: fixed;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      padding-right: $gutter;
-      padding-left: $gutter;
-      padding-bottom: $gutter;
-    }
-
-    #btn-contacto {
-      @include media-breakpoint-up (lg) {
-        margin-top: 24px;
-      }
-    }
-  }
-}
 
 .idiomas,
 .btn-cont {
@@ -81,13 +27,87 @@ body.category-3 {
   @include make-col(6);
 
   @include media-breakpoint-up (md) {
-    padding-left: 0;
-    padding-right: 0;
+    padding-left: $gutter;
+    padding-right: $gutter;
   }
 }
 
 .btn-cont {
   text-align: right;
+}
+//TEMPLATE INICIO
+body.template-inicio {
+  footer.content-info {
+    padding-top: 0;
+    bottom: 15px;
+    position: absolute;
+    width: 100%;
+
+    @include media-breakpoint-up (lg) {
+      position: absolute;
+      bottom: 15px;
+      //margin-top: 5px;
+    }
+  }
+
+  #btn-contacto {
+    display: block;
+  }
+}
+
+//CATEGORIA FOTOGRAFIA
+body.category-2,
+body.category-12 {
+  footer.content-info {
+    padding-top: 0;
+  }
+
+  @include media-breakpoint-up (lg) {
+    .btn-cont {
+      position: absolute;
+      right: 35px;
+      bottom: 23px;
+      z-index: 9;
+      padding-right: 0;
+    }
+
+    #btn-cerrar {
+      bottom: 25px;
+    }
+
+    .box-footer {
+      padding-bottom: 25px;
+    }
+  }
+}
+//CATEGORY POSTPRODUCCION
+body.category-3,
+body.category-13 {
+  footer.content-info {
+    @include media-breakpoint-up (lg) {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      padding-right: $gutter;
+      padding-left: $gutter;
+      padding-bottom: 15px;
+    }
+
+    @include media-breakpoint-up (lg) {
+      .btn-cont {
+        padding-right: 0;
+      }
+
+      .box-footer {
+        padding-bottom: 25px;
+      }
+
+      #btn-cerrar {
+        bottom: 25px;
+      }
+    }
+  }
 }
 
 //VISTA INDIVIDUAL///
@@ -146,10 +166,11 @@ body.single {
 
   @include media-breakpoint-up (lg) {
     line-height: 36px;
-    padding: ($gutter*2) $gutter $gutter;
+    padding: $gutter $gutter 10px $gutter;
     z-index: 10;
     border-top: 2px solid;
     position: absolute;
+    width: 100%;
   }
 }
 
@@ -162,7 +183,7 @@ body.single {
   right: 15px;
 
   @include media-breakpoint-up (sm) {
-    bottom: $gutter;
+    bottom: 10px;
     right: $gutter;
   }
 }
@@ -195,9 +216,16 @@ body.single {
         @include make-col(4);
       }
 
+      &:nth-child(2) {
+        display: block;
+      }
+
+      display: flex;
+      align-items: end;
+
       p {
-        position: absolute;
-        bottom: $gutter;
+        //position: absolute;
+        //bottom: 10px;
         margin-bottom: 0;
       }
     }
@@ -207,7 +235,7 @@ body.single {
 //SELECTOR DE IDIOMAS
 .wpml-ls-legacy-list-horizontal {
   border: 0;
-  padding: 0;
+  padding: 7px 0 0 0;
 
   a {
     padding: 0 10px;
@@ -222,9 +250,17 @@ body.single {
   .wpml-ls-item {
     float: left;
   }
+
+  .wpml-ls-current-language a span {
+    border-bottom: 1px solid;
+  }
 }
 
 .wpml-ls-item-es {
+  a {
+    padding-left: 0;
+  }
+
   a::after {
     content: '\2014';
     position: absolute;

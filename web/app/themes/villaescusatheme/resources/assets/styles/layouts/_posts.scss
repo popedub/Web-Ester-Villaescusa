@@ -12,6 +12,11 @@ section.cat-foto {
     margin-right: -55px;
     height: calc(#{$altura} - #{$foto});
   }
+
+  @include media-breakpoint-up (xxl) {
+    margin-right: -55px;
+    height: calc(#{$altura} - #{$foto});
+  }
 }
 
 .swiper-container-h .swiper-wrapper {
@@ -66,6 +71,15 @@ section.cat-foto {
 
     img {
       padding-bottom: $gutter;
+      max-width: 300px;
+    }
+  }
+
+  @include media-breakpoint-up (xxl) {
+    padding-right: 42%;
+
+    img {
+      padding-bottom: $gutter;
       max-width: 500px;
     }
   }
@@ -81,7 +95,15 @@ section.cat-foto {
   }
 
   @include media-breakpoint-up (lg) {
-    padding-right: 42%;
+    padding-right: 28%;
+
+    img {
+      max-width: 250px;
+    }
+  }
+
+  @include media-breakpoint-up (xxl) {
+    padding-right: 28%;
 
     img {
       max-width: 400px;
@@ -99,6 +121,14 @@ section.cat-foto {
   //   margin-right: 15%;
   // }
   @include media-breakpoint-up (lg) {
+    padding-right: 12%;
+
+    img {
+      max-width: 220px;
+    }
+  }
+
+  @include media-breakpoint-up (xxl) {
     padding-right: 12%;
 
     img {
@@ -286,6 +316,23 @@ section.cat-foto {
     height: auto;
     padding: 0;
   }
+
+  @include media-breakpoint-up (xxl) {
+    width: 55%;
+  }
+}
+
+.inner.vertical {
+  @include media-breakpoint-up (lg) {
+    width: 28%;
+    display: block;
+    height: auto;
+    padding: 0;
+  }
+
+  @include media-breakpoint-up (xxl) {
+    width: 28%;
+  }
 }
 
 .swiper-button-next-custom {
@@ -294,23 +341,24 @@ section.cat-foto {
 
   position: absolute;
   top: 50%;
-  right: 80px;
+  right: 0;
   left: auto;
   width: 27px;
   height: 44px;
   margin-top: -64px;
   z-index: 10;
   cursor: pointer;
-  background-size: 27px 44px;
-  background-position: center;
+  background-size: 85px;
+  background-position: 0;
   background-repeat: no-repeat;
+  background-image: url('../images/siguiente-anterior.svg');
 
-  &::before {
-    content: '+';
-    font-size: 64px;
-    font-weight: lighter;
-    margin-top: -22px;
-  }
+  // &::before {
+  //   content: '+';
+  //   font-size: 64px;
+  //   font-weight: lighter;
+  //   margin-top: -22px;
+  // }
 }
 
 .swiper-button-prev-custom {
@@ -320,22 +368,23 @@ section.cat-foto {
   position: absolute;
   top: 50%;
   right: auto;
-  left: 80px;
+  left: 0;
   width: 27px;
   height: 44px;
   margin-top: -64px;
   z-index: 10;
   cursor: pointer;
-  background-size: 27px 44px;
-  background-position: center;
+  background-size: 85px;
+  background-position: -30px;
+  background-image: url('../images/siguiente-anterior.svg');
   background-repeat: no-repeat;
 
-  &::before {
-    content: '-';
-    font-size: 64px;
-    font-weight: lighter;
-    margin-top: -22px;
-  }
+  // &::before {
+  //   content: '-';
+  //   font-size: 64px;
+  //   font-weight: lighter;
+  //   margin-top: -22px;
+  // }
 }
 
 .swiper-pagination-custom {
@@ -344,7 +393,7 @@ section.cat-foto {
   bottom: 15px;
 
   @include media-breakpoint-up (md) {
-    bottom: 0;
+    bottom: -10px;
     text-align: left;
     width: 100%;
     font-size: $tipo-header;
@@ -354,7 +403,10 @@ section.cat-foto {
 .caption-single {
   @include media-breakpoint-up (lg) {
     position: absolute;
-    right: 40%;
+    right: 0;
+    left: 0;
+    margin-left: auto;
+    margin-right: auto;
     bottom: 0;
     font-size: $tipo-header;
   }
@@ -386,7 +438,7 @@ section.cat-foto {
   display: none;
 
   @include media-breakpoint-up (md) {
-    padding: $gutter $gutter 0;
+    padding: 30px $gutter 0;
     display: flex;
   }
 }
@@ -411,6 +463,7 @@ section.cat-foto {
 .modal-content {
   border: none;
   height: 90%;
+  background-color: $bg;
 
   @include media-breakpoint-up (md) {
     height: 100%;
@@ -421,7 +474,15 @@ section.cat-foto {
   border-top: none;
 
   @include media-breakpoint-up (md) {
-    padding-bottom: $gutter;
+    padding-bottom: 20px;
     font-size: $tipo-header;
+  }
+}
+
+.modal-title {
+  @include media-breakpoint-up (md) {
+    border-bottom: 1px solid;
+    line-height: 1.35;
+    //padding-bottom: 0.25rem;
   }
 }

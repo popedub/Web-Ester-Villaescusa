@@ -52,11 +52,15 @@ export default {
             //eliminamos la clase de dónde tomamos las clases del body una vez asiganadas nuevamente
             $('#replace').remove();
           }
-          $('#menu-item-54 > a').addClass('no-smoothState');
+
           $('#menu-item-194 > a').addClass('no-smoothState');
+
+
           //volvemos a disparar los javascrips, en las dos categorías igual, :()
           ////////item menu contacto///////
           $('#menu-item-102').find('a').wrap('<p id="btn-contacto-mob"></p>');
+          $('#menu-item-196').find('a').wrap('<p id="btn-contacto-mob"></p>');
+
           $('#btn-contacto-mob').click(function () {
             $('.box-footer').slideToggle({
               direction: "up",
@@ -141,7 +145,7 @@ export default {
   },
   finalize() {
     // JavaScript to be fired on the home page, after the init JS
-    $('#menu-item-54 > a').addClass('no-smoothState');
+
     $('#menu-item-194 > a').addClass('no-smoothState');
 
     //eliminamos la clase de dónde tomamos las clases del body una vez asiganadas nuevamente

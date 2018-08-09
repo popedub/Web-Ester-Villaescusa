@@ -38,6 +38,7 @@ body.single {
 }
 
 #menu-menu-1,
+#menu-menu-1-eng,
 #menu-post {
   @extend .justify-content-sm-between ;
 
@@ -49,6 +50,7 @@ body.single {
 
 body.template-inicio {
   #menu-menu-1,
+  #menu-menu-1-eng,
   #menu-post {
     @extend .justify-content-sm-center ;
 
@@ -65,7 +67,8 @@ body.template-inicio {
 }
 
 //nombre de la web
-#menu-item-54 {
+#menu-item-54,
+#menu-item-194 {
   text-transform: uppercase;
   border-bottom: none;
 }
@@ -88,7 +91,8 @@ body.template-inicio {
 }
 
 ////////////CATGORIA FOTOGRAFIA///////////
-body.category-2 {
+body.category-2,
+body.category-12 {
   .sticky-top {
     @include media-breakpoint-up (lg) {
       padding-bottom: 10px;
@@ -138,7 +142,8 @@ body.category-2 {
   }
 }
 
-.menu-menu-1-container {
+.menu-menu-1-container,
+.menu-menu-1-eng-container {
   @extend .d-flex ;
   @extend .flex-column ;
   @extend .d-lg-block ;

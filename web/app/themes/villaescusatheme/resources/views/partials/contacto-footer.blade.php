@@ -1,6 +1,10 @@
 <div class="box-footer">
   <div class="bio">
+    @if(ICL_LANGUAGE_CODE == "es")
     {!! $contact !!}
+    @elseif(ICL_LANGUAGE_CODE == "en")
+    {!! $contact_en !!}
+    @endif
   </div>
   <div class="enlaces">
     <div class="box">

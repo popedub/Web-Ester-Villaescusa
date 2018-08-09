@@ -1,4 +1,4 @@
-<div class="modal animated fadeIn" id="info" tabindex="-1" role="dialog" aria-labelledby="infoTitle" aria-hidden="true">
+<div class="modal animated" id="info" tabindex="-1" role="dialog" aria-labelledby="infoTitle" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
@@ -15,7 +15,7 @@
 
       </div>
       <div class="modal-footer">
-        <a href="#" rol="button" data-dismiss="modal">@php echo __('Cerrar','sage'); @endphp</a>
+        <a href="#close" rol="button" data-custom-dismiss="modal">@php echo __('Cerrar','sage'); @endphp</a>
       </div>
     </div>
   </div>

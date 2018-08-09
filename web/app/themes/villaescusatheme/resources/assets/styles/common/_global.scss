@@ -56,9 +56,14 @@ body.template-inicio {
 
   @include media-breakpoint-up (md) {
     #menu-item-52,
-    #menu-item-53 {
+    #menu-item-53,
+    #menu-item-193,
+    #menu-item-195 {
       display: none;
     }
+
+    margin-left: 0;
+    margin-right: 0;
   }
 }
 
@@ -68,13 +73,15 @@ body.category {
   }
 }
 //cat 2 es fotografia
-body.category-2 {
+body.category-2,
+body.category-12 {
   @include media-breakpoint-up (md) {
     margin-bottom: 0;
   }
 }
 //categoria 3 es cat postproduccion
-body.category-3 {
+body.category-3,
+body.category-13 {
   background-color: $bg;
   margin-top: 0;
 
@@ -87,7 +94,8 @@ body.category-3 {
   }
 }
 
-body.category-3 div.wrap {
+body.category-3 div.wrap,
+body.category-13 div.wrap {
   @include media-breakpoint-up (lg) {
     padding-left: 125px;
     padding-right: 125px;
@@ -97,6 +105,10 @@ body.category-3 div.wrap {
 
 body.single {
   background-color: $bg;
+
+  header.banner {
+    background-color: $bg;
+  }
 
   .wrap {
     @include media-breakpoint-up (md) {
