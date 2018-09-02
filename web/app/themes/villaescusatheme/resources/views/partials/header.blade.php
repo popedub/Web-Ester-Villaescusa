@@ -7,10 +7,15 @@
       <a class="brand d-lg-none no-smoothState" href="{{ home_url('/inicio') }}">EV</a>
 
     @elseif(is_single())
-      <a class="brand d-lg-none text-left" href="{{ home_url('/inicio') }}">@php the_title() @endphp</a>
+      {{-- <a id="ht" class="brand d-lg-none text-left" href="{{ home_url('/inicio') }}">@php the_title() @endphp</a>
+      <a id="h" class="brand d-lg-none text-left" href="{{ home_url('/inicio') }}">@php echo 'EV'; @endphp</a> --}}
 
     @endif
       <input type="checkbox" id="menu-toggle" />
+      @if(is_single())
+      <a id="ht" class="brand d-lg-none text-left" href="{{ home_url('/inicio') }}">@php the_title() @endphp</a>
+      <a id="h" class="brand d-lg-none text-left" href="{{ home_url('/inicio') }}">@php echo 'EV'; @endphp</a>
+      @endif
       <label for="menu-toggle" class="label-toggle">
           <span></span>
           <span></span>

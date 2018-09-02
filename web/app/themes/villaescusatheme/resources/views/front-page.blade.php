@@ -13,9 +13,14 @@
     @include('partials.content-'.get_post_type())
   @endwhile
   <div id="slider-home">
-  @foreach ($slider as $image)
-    <a href="{{ $link_home }}"><img src="{{$image['url']}}" alt="{{$image['alt']}}" class="img-fluid"></a>
-  @endforeach
+    <?php $images = get_field('galeria_inicio'); ?>
+    @if($images)
+    @foreach($images as $slide)
+      <a href="{{ $link_home }}">
+        <div class="slide" style="background:url('<?php echo $slide['url']?>') no-repeat center;"></div>
+      </a>
+    @endforeach
+    @endif
   </div>
   {!! get_the_posts_navigation() !!}
 @endsection

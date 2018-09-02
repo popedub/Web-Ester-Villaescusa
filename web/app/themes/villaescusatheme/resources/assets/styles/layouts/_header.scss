@@ -3,9 +3,13 @@
 
   .brand {
     text-transform: uppercase;
-    font-size: $tipo-header;
-    line-height: 24px;
+    font-size: $tipo-titular-mobil;
     padding-top: 15px;
+
+    @include media-breakpoint-up (lg) {
+      font-size: $tipo-header;
+      line-height: 24px;
+    }
   }
 
   .container-fluid {
@@ -63,7 +67,11 @@ body.template-inicio {
 
 .al-centro {
   position: absolute;
-  left: 50%;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100px;
 }
 
 //nombre de la web
@@ -170,7 +178,7 @@ body.category-12 {
 
   .cerrar-menu {
     display: none;
-    font-size: $tipo-header;
+    font-size: $tipo-titular-mobil;
   }
 
   span {
@@ -201,6 +209,10 @@ body.category-12 {
   }
 }
 
+#h {
+  display: none;
+}
+
 #menu-toggle {
   display: none;
   transition: all 0.3s ease-in-out;
@@ -213,6 +225,15 @@ body.category-12 {
     visibility: visible;
     display: block;
     transition: all 0.3s ease-in-out;
+  }
+
+  &:checked ~ #h {
+    display: block;
+    text-decoration: none;
+  }
+
+  &:checked ~ #ht {
+    display: none;
   }
 
   &:checked ~ .nav-primary .nav {

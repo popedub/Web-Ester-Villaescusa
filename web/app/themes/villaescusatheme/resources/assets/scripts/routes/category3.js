@@ -14,7 +14,6 @@ import Swiper from 'swiper/dist/js/swiper.min';
 export default {
   init() {
 
-    //$('.transition').addClass('animated fadeInRight');
     $(function () {
 
       var options = {

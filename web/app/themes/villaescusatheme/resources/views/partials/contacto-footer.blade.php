@@ -1,4 +1,7 @@
 <div class="box-footer">
+  <div class="box-footer--titular-mob">
+    @php echo 'EV' @endphp
+  </div>
   <div class="bio">
     @if(ICL_LANGUAGE_CODE == "es")
     {!! $contact !!}
@@ -11,7 +14,7 @@
       <p>{{$email}}</p>
     </div>
     <div class="box">
-      <a href="{{$redes[0]}}">FB</a></br>
+      <a href="{{$redes[0]}}">FB</a><br>
       <a href="{{$redes[1]}}">INST</a>
     </div>
     <div class="box">

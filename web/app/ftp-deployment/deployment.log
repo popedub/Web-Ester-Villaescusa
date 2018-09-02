@@ -1,5 +1,5 @@
 Creating temporary directory /var/folders/04/shr__7wx1cb5lp950jg8g10r0000gn/T/deployment
-Started at [2018/08/09 12:01]
+Started at [2018/08/23 09:54]
 Config file is /Users/pope/Documents/SITES/estervillaescusa.com/site/web/app/ftp-deployment/deployment.ini
 
 Deploying my site
@@ -1118,6 +1118,7 @@ Ignoring ./node_modules/yargs
 Ignoring ./node_modules/yargs-parser    
 Ignoring ./node_modules/yauzl           
 Ignoring ./node_modules/yeast           
+Ignoring ./resources/assets/.DS_Store   
 Ignoring ./resources/assets/build       
 Ignoring ./resources/assets/config.json 
 Ignoring ./resources/assets/fonts       
@@ -1130,23 +1131,33 @@ Ignoring ./vendor
 Creating remote file .htdeployment.running
 
 Uploading:
-(1 of 6) /.cache-loader/092d9a8880dc3aa8d4fed8eeef89719f.json
-(2 of 6) /.cache-loader/34a83de751ced476d5315dded23b7174.json
-(3 of 6) /app/Controllers/App.php
-(4 of 6) /app/Untitled-1
-(5 of 6) /resources/views/partials/contacto-footer.blade.php
-(6 of 6) /.htdeployment
+( 1 of 11) /.cache-loader/092d9a8880dc3aa8d4fed8eeef89719f.json
+( 2 of 11) /.cache-loader/34a83de751ced476d5315dded23b7174.json
+( 3 of 11) /.cache-loader/7d255d9447339a34ccbd58a94b474103.json
+( 4 of 11) /.cache-loader/c5369fb60f3598c4daf92418cd7aeacb.json
+( 5 of 11) /dist/images/minus.svg
+( 6 of 11) /dist/images/plus.svg
+( 7 of 11) /dist/scripts/customizer.js.map
+( 8 of 11) /dist/scripts/main.js.map
+( 9 of 11) /dist/styles/main.css
+(10 of 11) /dist/styles/main.css.map
+(11 of 11) /.htdeployment
 
 Renaming:
-(1 of 6) Renaming /.cache-loader/092d9a8880dc3aa8d4fed8eeef89719f.json
-(2 of 6) Renaming /.cache-loader/34a83de751ced476d5315dded23b7174.json
-(3 of 6) Renaming /app/Controllers/App.php
-(4 of 6) Renaming /app/Untitled-1
-(5 of 6) Renaming /resources/views/partials/contacto-footer.blade.php
-(6 of 6) Renaming /.htdeployment
+( 1 of 11) Renaming /.cache-loader/092d9a8880dc3aa8d4fed8eeef89719f.json
+( 2 of 11) Renaming /.cache-loader/34a83de751ced476d5315dded23b7174.json
+( 3 of 11) Renaming /.cache-loader/7d255d9447339a34ccbd58a94b474103.json
+( 4 of 11) Renaming /.cache-loader/c5369fb60f3598c4daf92418cd7aeacb.json
+( 5 of 11) Renaming /dist/images/minus.svg
+( 6 of 11) Renaming /dist/images/plus.svg
+( 7 of 11) Renaming /dist/scripts/customizer.js.map
+( 8 of 11) Renaming /dist/scripts/main.js.map
+( 9 of 11) Renaming /dist/styles/main.css
+(10 of 11) Renaming /dist/styles/main.css.map
+(11 of 11) Renaming /.htdeployment
 
 Cleaning temp/cache
 
 Deleting remote file .htdeployment.running
 
-Finished at [2018/08/09 12:01] (in 17 seconds)
+Finished at [2018/08/23 09:55] (in 36 seconds)
